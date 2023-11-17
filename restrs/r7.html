@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishes</title>
+
+    <!-- FAVICONS FOR DIFFERENT ICONS-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- FAVICONS END -->
+
+    <!-- include icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- include fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+
+        *{
+            margin: 1;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Media queries for responsive design */
+    @media screen and (max-width: 680px) {
+
+            .topnav.responsive a,
+            i {
+                color: white !important;
+            }
+
+
+            main {
+                padding: 10px;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            #DishAndCart{
+            display: grid;
+            grid-template-columns: 100%;
+            }
+        }
+    </style>
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init("2SvW_piZjwxxnirva");
+})();
+</script>
+</head>
+
+<body>
+
+    <header>
+        <div class="topnav" id="myTopnav" style="background-color: black;">
+
+            <img class="navlogo" src="/images/wiggle.png" alt="Logo" style="height: 50px; width: 60px; padding:0;">
+
+            <a href="../index.html" id="brand_name">Wiggle</a>
+      <a href="../index.html" class="hvr">Home</a>
+      <a href="../about.html" class="hvr">About</a>
+      <a href="../menu.html" class="hvr">Menu</a>
+      <a href="../dishes.html" class="hvr">Dishes</a>
+      <a href="../review.html" class="hvr">Review</a>
+      <a href="../dishes.html" class="hvr"><i class="fa fa-shopping-cart" style="margin-right: 5px;"></i>Cart</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+
+    <h1 class="disheading">Enjoy the MouthWatering Dishes</h1>
+    <section id="DishAndCart">
+        
+        <!-- for dishes -->
+        <div id="dishes">
+            <div class="dishitem">
+                <img src='/images/restaurants/70.jpg' alt="">
+                <h3>Veg-Jalfrezi</h3>
+                <h5 class="offer"><b>Offer Price:&nbsp;</b>&#8377;80/-</h5>
+                <h5><b>Normal Price:&nbsp;</b><strike>&#8377;280/-</strike></h5>
+                <h5><b>Restaurant Name:&nbsp;</b>Dosa Dhabha</h5>
+                <button class="add-to-cart" onclick="addtocart('70')">Add to Cart</button>
+            </div>
+
+        
+
+        <div class="dishitem">
+                <img src='/images/restaurants/71.jpg' alt="">
+                <h3>Shakes</h3>
+                <h5 class="offer"><b>Offer Price:&nbsp;</b>&#8377;100/-</h5>
+                <h5><b>Normal Price:&nbsp;</b><strike>&#8377;300/-</strike></h5>
+                <h5><b>Restaurant Name:&nbsp;</b>Dosa Dhabha</h5>
+                <button class="add-to-cart" onclick="addtocart('71')">Add to Cart</button>
+            </div>
+
+        
+
+        <div class="dishitem">
+                <img src='/images/restaurants/72.jpg' alt="">
+                <h3>Mix-Shakes</h3>
+                <h5 class="offer"><b>Offer Price:&nbsp;</b>&#8377;200/-</h5>
+                <h5><b>Normal Price:&nbsp;</b><strike>&#8377;400/-</strike></h5>
+                <h5><b>Restaurant Name:&nbsp;</b>Dosa Dhabha</h5>
+                <button class="add-to-cart" onclick="addtocart('72')">Add to Cart</button>
+            </div>
+
+        
+
+        <div class="dishitem">
+                <img src='/images/restaurants/73.jpg' alt="">
+                <h3>Shahi-Paneer</h3>
+                <h5 class="offer"><b>Offer Price:&nbsp;</b>&#8377;300/-</h5>
+                <h5><b>Normal Price:&nbsp;</b><strike>&#8377;500/-</strike></h5>
+                <h5><b>Restaurant Name:&nbsp;</b>Dosa Dhabha</h5>
+                <button class="add-to-cart" onclick="addtocart('73')">Add to Cart</button>
+            </div>
+
+        
+
+      <div class="dishitem">
+                <img src='/images/restaurants/74.jpg' alt="">
+                <h3>Pastries</h3>
+                <h5><b>Normal Price:&nbsp;</b>&#8377;400/-</h5>
+                <h5><b>Restaurant Name:&nbsp;</b>Dosa Dhabha</h5>
+                <button class="add-to-cart" onclick="addtocart('74')">Add to Cart</button>
+            </div>
+      
+      
+
+      <div class="dishitem">
+                <img src='/images/restaurants/75.jpg' alt="">
+                <h3>Paneer-Hyderabadi</h3>
+                <h5><b>Normal Price:&nbsp;</b>&#8377;500/-</h5>
+                <h5><b>Restaurant Name:&nbsp;</b>Dosa Dhabha</h5>
+                <button class="add-to-cart" onclick="addtocart('75')">Add to Cart</button>
+            </div>
+      
+      
+
+      <div class="dishitem">
+                <img src='/images/restaurants/76.jpg' alt="">
+                <h3>Paneer-Lababdar</h3>
+                <h5><b>Normal Price:&nbsp;</b>&#8377;600/-</h5>
+                <h5><b>Restaurant Name:&nbsp;</b>Dosa Dhabha</h5>
+                <button class="add-to-cart" onclick="addtocart('76')">Add to Cart</button>
+            </div>
+      
+      
+
+      <div class="dishitem">
+                <img src='/images/restaurants/77.jpg' alt="">
+                <h3>Sambhar-Vada</h3>
+                <h5><b>Normal Price:&nbsp;</b>&#8377;700/-</h5>
+                <h5><b>Restaurant Name:&nbsp;</b>Dosa Dhabha</h5>
+                <button class="add-to-cart" onclick="addtocart('77')">Add to Cart</button>
+            </div>
+      
+      
+
+      <div class="dishitem">
+                <img src='/images/restaurants/78.jpg' alt="">
+                <h3>Vegetable-Biryani</h3>
+                <h5><b>Normal Price:&nbsp;</b>&#8377;800/-</h5>
+                <h5><b>Restaurant Name:&nbsp;</b>Dosa Dhabha</h5>
+                <button class="add-to-cart" onclick="addtocart('78')">Add to Cart</button>
+            </div>
+      
+      
+
+      <div class="dishitem">
+                <img src='/images/restaurants/79.jpg' alt="">
+                <h3>Vegetable-Kolhapuri</h3>
+                <h5><b>Normal Price:&nbsp;</b>&#8377;900/-</h5>
+                <h5><b>Restaurant Name:&nbsp;</b>Dosa Dhabha</h5>
+                <button class="add-to-cart" onclick="addtocart('79')">Add to Cart</button>
+            </div>
+            
+
+            
+            
+
+
+
+        </div>
+
+
+        <!-- for Cart -->
+
+
+        <div class="cart">
+            <h1 style="color: white; background: black; padding: 10px; margin-top: 0;">Cart [ <span id="cartitemcount">0</span> items ]</h1>
+
+            <!-- cart items will be placed here -->
+
+            <div id="cartitemcontainer">
+                    <div class="cartkiitem" id="emptycontent"><span><b>Your Cart is Empty!</b></span></div>
+                    
+                    <!-- items like this will come here by the javascript function -->
+
+                    <!-- <div class="cartkiitem" id="1">
+                        <span><img src="/images/restaurants/3.jpg" alt="">
+                       Burger</span>
+                        <span>
+                            <button onclick="decrementitem(${ide})><i class="fa fa-minus"></i></button>
+                            <button onclick="incrementitem(${ide})><i class="fa fa-plus"></i></button>
+                        </span>
+                        <span>&#8377; <span>100</span>/-</span>
+                    </div> -->
+
+            </div>
+            <div class="totalmoney" style="border-top: 2px solid black;">
+                <h3>Total &#8377; <span id="totalbill">0</span>/-</h3>
+            </div>
+            
+            
+            
+    <div class="addform">
+    <h2 style="text-align: center; margin-top: 10px;">Address..</h2>
+  <form>
+    
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+    
+    <label for="mobno">Mobile Number</label>
+    <input type="number" id="mobno" name="mobno" placeholder="Your Mobile Number.." required>
+    
+    
+    <label for="email">G-Mail Id</label>
+    <input type="email" id="email" name="email" placeholder="Your E-mail Id.." required>
+
+    <label for="addrses">Your Complete Address</label>
+    <input type="text" id="address" name="address" placeholder="Address.." required>
+    
+    
+    <label for="state">State</label>
+    <select id="state" name="state">
+      <option value="">--Select--</option>
+      <option value="Punjab">Punjab</option>
+    </select>
+  
+    <label for="district">District</label>
+    <select id="district" name="district">
+      <option value="">--Select--</option>
+      <option value="Ferozepur">Ferozepur</option>
+    </select>
+</form>
+</div>
+
+<button class="add-to-cart" onclick="checkout()">Checkout</button>
+
+</div>
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+    <footer>
+        <div class="foot">
+          <ul class="uloffoot">
+            <h4>Location</h4>
+            <p>Ferozepur Cantt <br> Ferozepur,Punjab,India</p>
+          </ul>
+          <ul class="uloffoot">
+            <h4>Quick Link</h4>
+            <li class="hvr"><a href="../index.html">Home</a></li>
+            <li class="hvr"><a href="../about.html">About</a></li>
+            <li class="hvr"><a href="../dishes.html">Dishes</a></li>
+            <li class="hvr"><a href="../menu.html">Menu</a></li>
+            <li class="hvr"><a href="../dishes.html">Order</a></li>
+            <li class="hvr"><a href="../review.html">Review</a></li>
+          </ul>
+          <ul class="uloffoot">
+            <h4>Contact</h4>
+            <li>1234567890</li>
+            <li>0987654321</li>
+            <li class="hvr"><a href="mailto:abc@gmail.com">abc@gmail.com</a></li>
+            <li class="hvr"><a href="mailto:abc@gmail.com">cde@gmail.com</a></li>
+            <li>Ferozepur Cantt</li>
+          </ul>
+          <ul class="uloffoot">
+            <h4>Info</h4>
+            <li class="hvr"><i class="fa fa-facebook"></i>Facebook</li>
+            <li class="hvr"><i class="fa fa-instagram"></i>Instagram</li>
+            <li class="hvr"><i class="fa fa-linkedin"></i>Linked-In</li>
+            <li class="hvr"><i class="fa fa-twitter"></i>Twitter</li>
+          </ul>
+        </div>
+        <div class="copyrt">
+          Copyright &copy;&nbsp; <a class="hvr" href="../index.html">wiggle.com</a> &nbsp; All Rights reserved.
+        </div>
+      </footer>
+
+    <script src="../index.js"></script>
+    <script>
+        
+            window.onbeforeunload=function(){
+            return "Are You Sure to Reload"
+            }
+    </script>
+</body>
+
+</html>

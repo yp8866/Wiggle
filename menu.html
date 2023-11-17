@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <!-- FAVICONS FOR DIFFERENT ICONS-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- FAVICONS END -->
+
+    <!-- include icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- include fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menutable {
+            text-align: left;
+            width: 90%;
+            /* border-collapse: collapse; */
+            margin: 10px auto;
+            margin-bottom: 100px;
+
+            border: 1px solid black;
+            overflow-x: auto;
+       
+
+        }
+
+        .tr {
+            padding: 10px;
+        }
+
+        th,
+        td {
+            width: 25%;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e5e5;
+            
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .search-container {
+            width: 90%;
+            margin: 10px auto;
+        }
+
+        .search-container input[type=text] {
+            padding: 10px;
+            width: 97.3%;
+            text-align: center;
+            font-size: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+        }
+
+        td i{
+            color: black!important;
+        }
+        td a{
+            text-decoration: none;
+            /* color: black; */
+        }
+
+        /* Media queries for responsive design */
+        @media screen and (max-width: 680px) {
+
+            .topnav.responsive a,
+            i {
+                color: white !important;
+            }
+
+            .menutable {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+                
+            }
+
+            th,
+            td {
+                display: inline-block;
+            }
+
+            /* th {
+                width: 25%;
+            }
+
+            td {
+                width: 25%;
+            } */
+
+            .search-container input[type=text] {
+                width: 97.3%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="topnav" id="myTopnav" style="background-color: black;">
+
+            <img class="navlogo" src="/images/wiggle.png" alt="Logo" style="height: 50px; width: 60px; padding:0;">
+
+            <a href="index.html" id="brand_name">Wiggle</a>
+      <a href="index.html" class="hvr">Home</a>
+      <a href="about.html" class="hvr">About</a>
+      <a href="menu.html" class="hvr">Menu</a>
+      <a href="dishes.html" class="hvr">Dishes</a>
+      <a href="review.html" class="hvr">Review</a>
+      <a href="dishes.html" class="hvr"><i class="fa fa-shopping-cart" style="margin-right: 5px;"></i>Cart</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+    <h1 style="text-align: center; margin-top: 80px; font-family: 'Belanosima', sans-serif;">Restaurants Menu</h1>
+    <h3 style="text-align: center; margin-top: 10px; font-family: 'Belanosima', sans-serif;">Select Restaurant to
+        continue...</h3>
+
+    <!-- search bar -->
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search Restaurants...">
+    </div>
+
+
+    <!-- table -->
+    <table class="menutable">
+        <tr class="tr">
+            <th>Restaurant</th>
+            <th>Rating</th>
+            <th>Location</th>
+            <th>Delivery Time</th>
+        </tr>
+        <tr>
+            <td><a href="./restrs/r0.html">Spice Junction</a></td>
+            <td>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+            </td>
+            <td>Ferozepur</td>
+            <td>20 mins</td>
+        </tr>
+        <tr>
+            <td><a href="./restrs/r1.html">Curry House</a></td>
+            <td>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+            </td>
+            <td>Ferozepur</td>
+            <td>35 mins</td>
+        </tr>
+        <tr>
+            <td><a href="./restrs/r2.html">Tandoori-Delights</a></td>
+            <td>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+            </td>
+            <td>Ferozepur</td>
+            <td>60 mins</td>
+        </tr>
+        <tr>
+            <td><a href="./restrs/r3.html">Saffron-Palace</a></td>
+            <td>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+            </td>
+            <td>Ferozepur</td>
+            <td>25 mins</td>
+        </tr>
+        <tr>
+            <td><a href="./restrs/r4.html">Masala-Mantra</a></td>
+            <td>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </td>
+            <td>Ferozepur</td>
+            <td>55 mins</td>
+        </tr>
+        <tr>
+            <td><a href="./restrs/r5.html">Biryani-Paradise</a></td>
+            <td>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+            </td>
+            <td>Ferozepur</td>
+            <td>30 mins</td>
+        </tr>
+        <tr>
+            <td><a href="./restrs/r6.html">Naan Nation</a></td>
+            <td>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+            </td>
+            <td>Ferozepur</td>
+            <td>30 mins</td>
+        </tr>
+        <tr>
+            <td><a href="./restrs/r7.html">Dosa Dhabha</a></td>
+            <td>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </td>
+            <td>Ferozepur</td>
+            <td>45 mins</td>
+        </tr>
+        <tr>
+            <td><a href="./restrs/r8.html">Mughal Mahal</a></td>
+            <td>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+                
+            </td>
+            <td>Ferozepur</td>
+            <td>30 mins</td>
+        </tr>
+        <tr>
+            <td><a href="./restrs/r9.html">Punjabi Dhabha</a></td>
+            <td>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </td>
+            <td>Ferozepur</td>
+            <td>25 mins</td>
+        </tr>
+        <tr>
+            <td><a href="./restrs/r10.html">Roll Corner</a></td>
+            <td>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+                
+            </td>
+            <td>Ferozepur</td>
+            <td>50 mins</td>
+        </tr>
+        <tr>
+            <td><a href="./restrs/r11.html">Samosa Street</a></td>
+            <td>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+            </td>
+            <td>Ferozepur</td>
+            <td>30 mins</td>
+        </tr>
+        <tr>
+            <td><a href="./restrs/r12.html">Samosa Street 2</a></td>
+            <td>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+               
+            </td>
+            <td>Ferozepur</td>
+            <td>40 mins</td>
+        </tr>
+        <tr>
+            <td><a href="./restrs/r13.html">Chai Chaat</a></td>
+            <td>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </td>
+            <td>Ferozepur</td>
+            <td>60 mins</td>
+        </tr>
+        
+        <!-- Add more rows for additional restaurants -->
+    </table>
+
+
+
+
+    <!-- footer -->
+    <footer>
+    <div class="foot">
+      <ul class="uloffoot">
+        <h4>Location</h4>
+        <p>Ferozepur Cantt <br> Ferozepur,Punjab,India</p>
+      </ul>
+      <ul class="uloffoot">
+        <h4>Quick Link</h4>
+        <li class="hvr"><a href="index.html">Home</a></li>
+        <li class="hvr"><a href="about.html">About</a></li>
+        <li class="hvr"><a href="dishes.html">Dishes</a></li>
+        <li class="hvr"><a href="menu.html">Menu</a></li>
+        <li class="hvr"><a href="dishes.html">Order</a></li>
+        <li class="hvr"><a href="review.html">Review</a></li>
+      </ul>
+      <ul class="uloffoot">
+        <h4>Contact</h4>
+        <li>1234567890</li>
+        <li>0987654321</li>
+        <li class="hvr"><a href="mailto:abc@gmail.com">abc@gmail.com</a></li>
+        <li class="hvr"><a href="mailto:abc@gmail.com">cde@gmail.com</a></li>
+        <li>Ferozepur Cantt</li>
+      </ul>
+      <ul class="uloffoot">
+        <h4>Info</h4>
+        <li class="hvr"><i class="fa fa-facebook"></i>Facebook</li>
+        <li class="hvr"><i class="fa fa-instagram"></i>Instagram</li>
+        <li class="hvr"><i class="fa fa-linkedin"></i>Linked-In</li>
+        <li class="hvr"><i class="fa fa-twitter"></i>Twitter</li>
+      </ul>
+    </div>
+    <div class="copyrt">
+      Copyright &copy;&nbsp; <a class="hvr" href="index.html">wiggle.com</a> &nbsp; All Rights reserved.
+    </div>
+  </footer>
+
+
+
+
+    <!-- javascript for search bar -->
+
+    <script>
+        const searchInput = document.getElementById('search-input');
+        const table = document.querySelector('table');
+        const rows = table.getElementsByTagName('tr');
+
+        searchInput.addEventListener('keyup', function () {
+            const query = this.value.toLowerCase();
+
+            for (let i = 1; i < rows.length; i++) {
+                const row = rows[i];
+                const columns = row.getElementsByTagName('td');
+                let found = false;
+
+                for (let j = 0; j < columns.length; j++) {
+                    const columnText = columns[j].textContent.toLowerCase();
+
+                    if (columnText.includes(query)) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                row.style.display = found ? '' : 'none';
+            }
+        });
+    </script>
+    <script src="index.js"></script>
+
+
+    <body>
+
+    </body>
+
+</html>
